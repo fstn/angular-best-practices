@@ -21,16 +21,6 @@ angular.module('supplier.portal').factory('QueryFactory', [function () {
         }
 
         return {
-            query: [],
-            start: 0,
-            size: 10,
-            sort: 0,
-            initialize: function (parameters, start, size, sort) {
-                this.query = parameters;
-                this.start = start;
-                this.size = size;
-                this.sort = sort;
-            },
             create: function (parameters, start, size, sort) {
                 return new Query(parameters, start, size, sort);
             }
